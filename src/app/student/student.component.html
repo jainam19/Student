@@ -1,0 +1,34 @@
+<div>
+  <form>
+    Id: <input [(ngModel)]="id"  id="id" type="text"><br><br>
+    Name: <input [(ngModel)]="name"  name="name" type="text"><br><br>
+    Marks: <input [(ngModel)]="marks"  name="marks" type="text"><br><br>
+    Rollno:<input [(ngModel)]="rollNo"  name="rollNo" type="text"><br><br>
+  
+<button (click)="sendPost()">Submit</button><br><br><br>
+  </form></div>
+
+<div>
+
+<table class="table">
+        <caption>Student Details</caption>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Marks </th>
+        <th> Roll number </th>
+        <th> Delete </th>
+
+        <tr *ngFor="let student of studentList">
+
+           <td>  {{student.id}} </td>
+            <td> {{student.name}} </td>
+            <td> {{student.marks}} </td>
+            <td> {{student.rollNo}}</td>
+            <td>
+                <form action ="/deleteitem/ %=student.rollNo %?_method=DELETE" method="POST">
+                <button (click)="delete(student.rollNo)">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </table>
+</div>
