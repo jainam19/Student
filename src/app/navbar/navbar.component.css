@@ -1,0 +1,18 @@
+.nav{
+    background-color: indianred;
+    overflow: hidden;
+}
+
+.nav a{
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 10px 15px;
+    size: 15px;
+}
+
+.nav a:hover{
+    color: rgba(7, 0, 130, 0.493);
+}
+
+
